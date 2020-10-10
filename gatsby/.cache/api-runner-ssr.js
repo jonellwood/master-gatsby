@@ -1,11 +1,11 @@
 var plugins = [{
-      plugin: require('/Users/jonathanellwood/Documents/GitHub/master-gatsby/gatsby/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      plugin: require('/home/jon/Desktop/master-gatsby/gatsby/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/jonathanellwood/Documents/GitHub/master-gatsby/gatsby/node_modules/gatsby-source-sanity/gatsby-ssr'),
+      plugin: require('/home/jon/Desktop/master-gatsby/gatsby/node_modules/gatsby-source-sanity/gatsby-ssr'),
       options: {"plugins":[],"projectId":"eeu5nfk3","dataset":"production","watchmode":true,"token":"sk0FmIlRlXUkWJfcixcznUZvdiL3yuVlATDuL2bWibWUJ5snzcvu0IyyZBEpkF2W2WpOOeT9QRw5m6PSe1T4GDeIj2qwcoWbPlSXCwU9BBtmHHtXorcnIBTnRzMLYXdeopbS5Ve87DDsAq8VJ1TxF6Ykmz8YZIRezGoaEHvuUnzgQQ4hhvVP"},
     },{
-      plugin: require('/Users/jonathanellwood/Documents/GitHub/master-gatsby/gatsby/gatsby-ssr'),
+      plugin: require('/home/jon/Desktop/master-gatsby/gatsby/gatsby-ssr'),
       options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
