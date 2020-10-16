@@ -1,18 +1,32 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import Img from 'gatsby-image';
+import styled from 'styled-components';
 import PizzaList from '../components/PizzaList';
+
+const PizzaGrid = styled.div`
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+`;
 
 export default function SinglePizzaPage({ data: { pizza } }) {
   return (
-    <>
-      <h2>{pizza.name}</h2>
+    <PizzaGrid>
       <Img fluid={pizza.image.asset.fluid} />
-      <p>{pizza.toppings.name}</p>
-    </>
+      <div>
+        <h2 className="mark">{pizza.name}</h2>
+        <ul>
+          {pizza.toppings.map((topping) => (
+            <li key={topping.id}>{topping.name}</li>
+          ))}
+        </ul>
+      </div>
+      {}
+    </PizzaGrid>
   );
 }
-
+// Need to finish listing the toppings //
 export const query = graphql`
   query($slug: String!) {
     pizza: sanityPizza(slug: { current: { eq: $slug } }) {
