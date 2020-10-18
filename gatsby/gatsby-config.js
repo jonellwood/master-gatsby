@@ -7,6 +7,7 @@ export default {
     title: `Slicks Slices`,
     siteURL: 'https://gatsby.pizza',
     description: `Time to feed the baby,`,
+    twitter: `@slicksSlices`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
