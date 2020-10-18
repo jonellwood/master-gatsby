@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-import path from 'path';
+import path, { resolve } from 'path';
 import fetch from 'isomorphic-fetch';
 
 async function turnPizzasIntoPages({ graphql, actions }) {
@@ -103,6 +103,16 @@ async function turnSlicemastersIntoPages({ graphql, actions }) {
     }
   `);
   // turn each into their own page
+  data.slicemasters.nodes.forEach((slicemaster) => {
+    actions.createPage({
+      component: resolve('./src/templates/Slicemaster.js'),
+      path: `/slicemaster/${slicemaster.slug.current}`,
+      context: {
+        name: slicemaster.person,
+        slug: slicemaster.slug.current,
+      },
+    });
+  });
   // figure out how many pages there are based on how many slicemasters there are adn how many per page
   const pageSize = parseInt(process.env.GATSBY_PAGE_SIZE);
   const pageCount = Math.ceil(data.slicemasters.totalCount / pageSize);
@@ -124,6 +134,38 @@ async function turnSlicemastersIntoPages({ graphql, actions }) {
   });
 }
 
+// async function turnSlicemastersIntoSinglePages({ graphql, actions }) {
+//   const slicemasterTemplate = path.resolve('./src/pages/slicesmasters.js');
+//   const { data } = await graphql(`
+//     query {
+//       slicemasters: allSanityPerson {
+//         nodes {
+//           id
+//           image {
+//             asset {
+//               fluid(maxHeight: 400)
+//             }
+//           }
+//           name
+//           description
+//           slug {
+//             current
+//           }
+//         }
+//       }
+//   `);
+
+//   data.slicemasters.forEach((name) => {
+//     actions.createPage({
+//       path: `slicemasters/${slicemasters.name}`,
+//       component: slicemasterTemplate,
+//       context: {
+//         slicemaster: slicemaster.name,
+//       },
+//     });
+//   });
+// }
+
 export async function sourceNodes(params) {
   // fetch beers from list and get them into Gatsby
   await Promise.all([fetchBeersAndTurnIntoNodes(params)]);
@@ -134,5 +176,6 @@ export async function createPages(params) {
     turnPizzasIntoPages(params),
     turnToppingsIntoPages(params),
     turnSlicemastersIntoPages(params),
+    // turnSlicemastersIntoSinglePages(params),
   ]);
 }

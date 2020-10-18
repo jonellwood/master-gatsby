@@ -9,6 +9,7 @@ export default {
     description: `Time to feed the baby,`,
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-sanity',

@@ -1,4 +1,7 @@
 var plugins = [{
+      plugin: require('/home/jon/Documents/GitHub/master-gatsby/gatsby/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('/home/jon/Documents/GitHub/master-gatsby/gatsby/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},
     },{
