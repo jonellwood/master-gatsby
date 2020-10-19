@@ -6,6 +6,7 @@ import 'normalize.css';
 import GlobalStyles from '../styles/GlobalStyles';
 import Typography from '../styles/Typography';
 import stripes from '../assets/images/stripes.svg';
+import skull from '../assets/images/SugarSkullOutline.png';
 
 const SiteBorderStyles = styled.div`
   max-width: 1000px;
@@ -25,6 +26,8 @@ const SiteBorderStyles = styled.div`
 
 const ContentStyles = styled.div`
   background: white;
+  /* background-image: url(${skull}); */
+  background-size: cover;
   padding: 2rem;
 `;
 

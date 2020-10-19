@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import Logo from './Logo';
+// import Logo from './Logo';
+import SkullLogo from './SkullLogo';
 
 const NavStyles = styled.nav`
   margin-bottom: 3rem;
@@ -53,15 +54,15 @@ export default function Nav() {
           <Link to="/">Hot Now</Link>{' '}
         </li>
         <li>
-          <Link to="/pizza">Pizzas</Link>
+          <Link to="/pizza">Skulls</Link>
         </li>
         <li>
           <Link to="/">
-            <Logo />
+            <SkullLogo />
           </Link>
         </li>
         <li>
-          <Link to="/slicemasters">Slicemasters</Link>
+          <Link to="/slicemasters">The Team</Link>
         </li>
         <li>
           <Link to="/order">Order</Link>

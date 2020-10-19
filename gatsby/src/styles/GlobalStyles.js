@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
-import bg from '../assets/images/bg.svg';
+// import bg from '../assets/images/bg.svg';
 import stripes from '../assets/images/stripes.svg';
+import pattern from '../assets/images/pattern.svg';
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -11,8 +12,8 @@ const GlobalStyles = createGlobalStyle`
     --grey: #efefef;
   }
   html {
-    background-image: url(${bg});
-    background-size: 450px;
+    background-image: url(${pattern});
+    background-size: cover;
     background-attachment: fixed;
     font-size: 10px;
   }
