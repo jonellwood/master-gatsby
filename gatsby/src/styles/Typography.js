@@ -1,16 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
 
-import font from '../assets/fonts/frenchfries.woff';
-// import font from '../assets/fonts/branda.ttf';
+// import font from '../assets/fonts/frenchfries.woff';
+import font from '../assets/fonts/branda.ttf';
 // import font from '../assets/fonts/mortal.otf';
 
 const Typography = createGlobalStyle`
   @font-face {
-    font-family: FrenchFries;
+    font-family: Branda;
     src: url(${font});
   }
   html {
-    font-family: FrenchFries, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Branda, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--black);
   }
   p, li {
