@@ -1,13 +1,13 @@
 import { useState } from 'react';
 
 export default function usePizza({ pizzas, inputs }) {
-  // create state to hold order
+  // 1. Create some state to hold our order
   const [order, setOrder] = useState([]);
-  // make function to add things to order
+  // 2. Make a function add things to order
   function addToOrder(orderedPizza) {
     setOrder([...order, orderedPizza]);
   }
-  // make function to remove things from order
+  // 3. Make a function remove things from order
   function removeFromOrder(index) {
     setOrder([
       // everything before the item we want to remove
@@ -16,8 +16,9 @@ export default function usePizza({ pizzas, inputs }) {
       ...order.slice(index + 1),
     ]);
   }
-  // send the data to a sererless function when the order
+  // 4. Send this data the a serevrless function when they check out
   // TODO
+
   return {
     order,
     addToOrder,
