@@ -12,14 +12,14 @@ const BeerStyles = styled.div`
   padding: 2rem;
   text-align: center;
   img {
-      width: 100%
-      height: 200px;
-      object-fit: contain;
-      display: grid;
-      align-items: center;
-      font-size: 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    display: grid;
+    align-items: center;
+    font-size: 10px;
   }
-  
+
   h2,
   p {
     margin: 0;

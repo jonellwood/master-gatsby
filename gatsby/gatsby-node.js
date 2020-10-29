@@ -65,7 +65,7 @@ async function fetchBeersAndTurnIntoNodes({
   // Fetch list of beers
   const res = await fetch('https://sampleapis.com/beers/api/ale');
   const beers = await res.json();
-  console.log(beers);
+  // console.log(beers);
   // loop over each
   for (const beer of beers) {
     const nodeMeta = {
@@ -116,12 +116,12 @@ async function turnSlicemastersIntoPages({ graphql, actions }) {
   // figure out how many pages there are based on how many slicemasters there are adn how many per page
   const pageSize = parseInt(process.env.GATSBY_PAGE_SIZE);
   const pageCount = Math.ceil(data.slicemasters.totalCount / pageSize);
-  console.log(
-    `There are ${data.slicemasters.totalCount} total people and we have ${pageCount} pages with ${pageSize} per page`
-  );
+  // console.log(
+  //   `There are ${data.slicemasters.totalCount} total people and we have ${pageCount} pages with ${pageSize} per page`
+  // );
   // loop from 1 to n - and creeate pages for these
   Array.from({ length: pageCount }).forEach((_, i) => {
-    console.log(`creating page ${i}`);
+    // console.log(`creating page ${i}`);
     actions.createPage({
       path: `/slicemasters/${i + 1}`,
       component: path.resolve(`./src/pages/slicemasters.js`),
