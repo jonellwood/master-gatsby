@@ -43,6 +43,13 @@ const transporter = nodemailer.createTransport({
 exports.handler = async (event, context) => {
   // await wait(5000);
   const body = JSON.parse(event.body);
+  // check if their is mapleSyrup with the order
+  if (body.mapleSyrup) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ message: 'down with the bots! ERROR# 1984' }),
+    };
+  }
   // validate data coming in
   const requiredFields = ['email', 'name', 'order'];
 
