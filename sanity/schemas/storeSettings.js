@@ -19,7 +19,7 @@ export default {
       of: [{ type: 'reference', to: [{ type: 'person' }] }],
     },
     {
-      name: 'hotslices',
+      name: 'hotSlices',
       title: 'Hotslices available in the case',
       type: 'array',
       of: [{ type: 'reference', to: [{ type: 'pizza' }] }],
