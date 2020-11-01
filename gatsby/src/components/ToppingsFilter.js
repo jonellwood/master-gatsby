@@ -69,11 +69,11 @@ export default function ToppingsFilter({ activeTopping }) {
     }
   `);
 
-  console.log({ toppings, pizzas });
+  // console.log({ toppings, pizzas });
 
   const toppingsWithCounts = countPizzasInToppings(pizzas.nodes);
-  console.clear();
-  console.log(toppingsWithCounts);
+  // console.clear();
+  // console.log(toppingsWithCounts);
 
   return (
     <ToppingsStyles>
