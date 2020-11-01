@@ -36,7 +36,7 @@ export default function useLatestData() {
               slicemaster {
                ${deets}
               }
-              hotslices {
+              hotSlices {
                ${deets}
               }
             }
